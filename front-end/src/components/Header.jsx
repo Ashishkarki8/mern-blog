@@ -5,7 +5,6 @@ import {
   NavbarLink,
   TextInput,
 } from "flowbite-react";
-import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FaMoon } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
@@ -39,14 +38,14 @@ const Header = () => {
       <div className="flex gap-2 md:order-2">
         <Button
           className="w-12 h-10 hidden sm:inline border border-black"
-          color=""
+          color="grey"
           pill
         >
           {/* sm bhanda thulo screen haruma inline ley dekhaucha*/}
           <FaMoon />
         </Button>
         <Link to={"/sign-in"}>
-          <Button to={"/"} gradientDuoTone="purpleToBlue">
+          <Button to={"/"} gradientDuoTone="purpleToBlue" outline>
             SignIn
           </Button>
         </Link>
@@ -64,13 +63,13 @@ const Header = () => {
       </NavbarCollapse> */}
       <NavbarCollapse>
         <NavbarLink active={path === '/'} as={'div'} >
-          <Link to='/' className=" block">Home</Link>
+          <Link to='/' className="block lg:text-lg" >Home</Link>
         </NavbarLink>
         <NavbarLink active={path === '/about'} className=" block" as={'div'}>
-          <Link className=" block" to='/about'>About</Link>
+          <Link className=" block lg:text-lg" to='/about'>About</Link>
         </NavbarLink>
         <NavbarLink active={path === "/projects"} as={'div'}>
-          <Link to='/projects' className=" block">Projects</Link>
+          <Link to='/projects' className="block lg:text-lg">Projects</Link>
         </NavbarLink>
       </NavbarCollapse>
     </Navbar>
